@@ -1,0 +1,10 @@
+D:\4ANet\A4_Net\A4_Net\bin\Debug\A4_Net.exe.config
+D:\4ANet\A4_Net\A4_Net\bin\Debug\A4_Net.exe
+D:\4ANet\A4_Net\A4_Net\bin\Debug\A4_Net.pdb
+D:\4ANet\A4_Net\A4_Net\obj\Debug\A4_Net.csproj.AssemblyReference.cache
+D:\4ANet\A4_Net\A4_Net\obj\Debug\A4_Net.Form2.resources
+D:\4ANet\A4_Net\A4_Net\obj\Debug\A4_Net.Properties.Resources.resources
+D:\4ANet\A4_Net\A4_Net\obj\Debug\A4_Net.csproj.GenerateResource.cache
+D:\4ANet\A4_Net\A4_Net\obj\Debug\A4_Net.csproj.CoreCompileInputs.cache
+D:\4ANet\A4_Net\A4_Net\obj\Debug\A4_Net.exe
+D:\4ANet\A4_Net\A4_Net\obj\Debug\A4_Net.pdb
