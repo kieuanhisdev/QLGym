@@ -16,5 +16,15 @@ namespace A4_Net
         {
             InitializeComponent();
         }
+
+        private void text2dichvu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text3dichvu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
