@@ -32,3 +32,15 @@ C:\Users\bidan\OneDrive - qv56\QLGym\A4_Net\obj\Debug\A4_Net.csproj.GenerateReso
 C:\Users\bidan\OneDrive - qv56\QLGym\A4_Net\obj\Debug\A4_Net.csproj.CoreCompileInputs.cache
 C:\Users\bidan\OneDrive - qv56\QLGym\A4_Net\obj\Debug\A4_Net.exe
 C:\Users\bidan\OneDrive - qv56\QLGym\A4_Net\obj\Debug\A4_Net.pdb
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\bin\Debug\A4_Net.exe.config
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\bin\Debug\A4_Net.exe
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\bin\Debug\A4_Net.pdb
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.csproj.AssemblyReference.cache
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.an.resources
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.Form1.resources
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.Form2.resources
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.Properties.Resources.resources
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.csproj.GenerateResource.cache
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.csproj.CoreCompileInputs.cache
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.exe
+C:\Users\bidan\OneDrive - qv56\app\backup\QLGym\A4_Net\obj\Debug\A4_Net.pdb
