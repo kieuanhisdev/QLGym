@@ -34,6 +34,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
@@ -62,6 +63,14 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel3.SuspendLayout();
+
+            this.tabControl1.SuspendLayout();
+
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,7 +87,9 @@
             // 
             // tabPage1
             // 
+
             this.tabPage1.Controls.Add(this.dataGridView1);
+
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -128,7 +139,12 @@
             this.tabPage4.Text = "Thống Kê";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+
             // panel1
+
+
+            // dataGridView1
+
             // 
             this.panel1.Controls.Add(this.dgvAccount);
             this.panel1.Location = new System.Drawing.Point(6, 6);
@@ -325,6 +341,7 @@
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
             // 
+
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,14 +351,18 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.tabControl1.ResumeLayout(false);
+
+
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+
             this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.panel3.ResumeLayout(false);
+
             this.ResumeLayout(false);
 
         }
@@ -356,6 +377,7 @@
 
 
         private System.Windows.Forms.DataGridView dataGridView1;
+
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label hoTen;
@@ -376,5 +398,6 @@
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btThem;
+
     }
 }
