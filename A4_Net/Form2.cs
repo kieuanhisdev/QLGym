@@ -26,5 +26,10 @@ namespace A4_Net
         {
 
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
