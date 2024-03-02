@@ -16,5 +16,28 @@ namespace A4_Net
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Form2 f2 = new Form2();
+            this.Hide();
+            f2.ShowDialog();
+            this.Show();
+
+        }
+
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+            an f3 = new an();
+            this.Hide();
+            f3.ShowDialog();
+            this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           Application.Exit();
+        }
     }
 }
