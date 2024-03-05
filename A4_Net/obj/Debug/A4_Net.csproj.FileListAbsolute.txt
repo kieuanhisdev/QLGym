@@ -68,3 +68,6 @@ D:\4ANet\New folder\QLGym\A4_Net\obj\Debug\A4_Net.csproj.GenerateResource.cache
 D:\4ANet\New folder\QLGym\A4_Net\obj\Debug\A4_Net.csproj.CoreCompileInputs.cache
 D:\4ANet\New folder\QLGym\A4_Net\obj\Debug\A4_Net.exe
 D:\4ANet\New folder\QLGym\A4_Net\obj\Debug\A4_Net.pdb
+D:\4ANet\New folder\QLGym\A4_Net\obj\Debug\A4_Net.Form3.resources
+D:\4ANet\New folder\QLGym\A4_Net\obj\Debug\A4_Net.Form4.resources
+D:\4ANet\New folder\QLGym\A4_Net\obj\Debug\A4_Net.Form5.resources
