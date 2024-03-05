@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace A4_Net
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
-
-        
     }
 }
