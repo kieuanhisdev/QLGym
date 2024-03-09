@@ -16,5 +16,15 @@ namespace A4_Net
         {
             InitializeComponent();
         }
+
+        private void lb1sanpham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb3dichvu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
