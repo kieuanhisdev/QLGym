@@ -48,37 +48,31 @@
             this.btXoaAccount = new System.Windows.Forms.Button();
             this.btSuaAccount = new System.Windows.Forms.Button();
             this.btThemAccount = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dtpNgaySinhAccount);
-            this.panel2.Controls.Add(this.rbNuAccount);
-            this.panel2.Controls.Add(this.rbNamAccount);
-            this.panel2.Controls.Add(this.txbDiaChiAccount);
-            this.panel2.Controls.Add(this.txbEmailAccount);
-            this.panel2.Controls.Add(this.txbSDTAccount);
-            this.panel2.Controls.Add(this.txbNameAccount);
-            this.panel2.Controls.Add(this.diaChiAccount);
-            this.panel2.Controls.Add(this.EmailAccount);
-            this.panel2.Controls.Add(this.soDienThoaiAccount);
-            this.panel2.Controls.Add(this.gioiTinhAccount);
-            this.panel2.Controls.Add(this.ngaySinhAccount);
-            this.panel2.Controls.Add(this.hoTenAccount);
-            this.panel2.Location = new System.Drawing.Point(494, 12);
+            this.panel2.Controls.Add(this.dgvAccount);
+            this.panel2.Location = new System.Drawing.Point(455, 83);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(434, 529);
+            this.panel2.Size = new System.Drawing.Size(900, 660);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dtpNgaySinhAccount
             // 
             this.dtpNgaySinhAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinhAccount.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinhAccount.Location = new System.Drawing.Point(181, 163);
+            this.dtpNgaySinhAccount.Location = new System.Drawing.Point(155, 106);
             this.dtpNgaySinhAccount.Name = "dtpNgaySinhAccount";
             this.dtpNgaySinhAccount.Size = new System.Drawing.Size(233, 29);
             this.dtpNgaySinhAccount.TabIndex = 25;
@@ -87,7 +81,7 @@
             // 
             this.rbNuAccount.AutoSize = true;
             this.rbNuAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNuAccount.Location = new System.Drawing.Point(285, 221);
+            this.rbNuAccount.Location = new System.Drawing.Point(259, 164);
             this.rbNuAccount.Name = "rbNuAccount";
             this.rbNuAccount.Size = new System.Drawing.Size(53, 28);
             this.rbNuAccount.TabIndex = 24;
@@ -99,7 +93,7 @@
             // 
             this.rbNamAccount.AutoSize = true;
             this.rbNamAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNamAccount.Location = new System.Drawing.Point(182, 221);
+            this.rbNamAccount.Location = new System.Drawing.Point(156, 164);
             this.rbNamAccount.Name = "rbNamAccount";
             this.rbNamAccount.Size = new System.Drawing.Size(68, 28);
             this.rbNamAccount.TabIndex = 23;
@@ -109,28 +103,28 @@
             // 
             // txbDiaChiAccount
             // 
-            this.txbDiaChiAccount.Location = new System.Drawing.Point(181, 414);
+            this.txbDiaChiAccount.Location = new System.Drawing.Point(155, 357);
             this.txbDiaChiAccount.Name = "txbDiaChiAccount";
             this.txbDiaChiAccount.Size = new System.Drawing.Size(233, 20);
             this.txbDiaChiAccount.TabIndex = 22;
             // 
             // txbEmailAccount
             // 
-            this.txbEmailAccount.Location = new System.Drawing.Point(181, 349);
+            this.txbEmailAccount.Location = new System.Drawing.Point(155, 292);
             this.txbEmailAccount.Name = "txbEmailAccount";
             this.txbEmailAccount.Size = new System.Drawing.Size(233, 20);
             this.txbEmailAccount.TabIndex = 21;
             // 
             // txbSDTAccount
             // 
-            this.txbSDTAccount.Location = new System.Drawing.Point(181, 288);
+            this.txbSDTAccount.Location = new System.Drawing.Point(155, 231);
             this.txbSDTAccount.Name = "txbSDTAccount";
             this.txbSDTAccount.Size = new System.Drawing.Size(233, 20);
             this.txbSDTAccount.TabIndex = 20;
             // 
             // txbNameAccount
             // 
-            this.txbNameAccount.Location = new System.Drawing.Point(181, 100);
+            this.txbNameAccount.Location = new System.Drawing.Point(155, 43);
             this.txbNameAccount.Name = "txbNameAccount";
             this.txbNameAccount.Size = new System.Drawing.Size(233, 20);
             this.txbNameAccount.TabIndex = 19;
@@ -139,7 +133,7 @@
             // 
             this.diaChiAccount.AutoSize = true;
             this.diaChiAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diaChiAccount.Location = new System.Drawing.Point(45, 409);
+            this.diaChiAccount.Location = new System.Drawing.Point(19, 352);
             this.diaChiAccount.Name = "diaChiAccount";
             this.diaChiAccount.Size = new System.Drawing.Size(67, 24);
             this.diaChiAccount.TabIndex = 18;
@@ -149,7 +143,7 @@
             // 
             this.EmailAccount.AutoSize = true;
             this.EmailAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailAccount.Location = new System.Drawing.Point(45, 344);
+            this.EmailAccount.Location = new System.Drawing.Point(19, 287);
             this.EmailAccount.Name = "EmailAccount";
             this.EmailAccount.Size = new System.Drawing.Size(57, 24);
             this.EmailAccount.TabIndex = 17;
@@ -159,7 +153,7 @@
             // 
             this.soDienThoaiAccount.AutoSize = true;
             this.soDienThoaiAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soDienThoaiAccount.Location = new System.Drawing.Point(45, 284);
+            this.soDienThoaiAccount.Location = new System.Drawing.Point(19, 227);
             this.soDienThoaiAccount.Name = "soDienThoaiAccount";
             this.soDienThoaiAccount.Size = new System.Drawing.Size(121, 24);
             this.soDienThoaiAccount.TabIndex = 16;
@@ -169,7 +163,7 @@
             // 
             this.gioiTinhAccount.AutoSize = true;
             this.gioiTinhAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gioiTinhAccount.Location = new System.Drawing.Point(45, 223);
+            this.gioiTinhAccount.Location = new System.Drawing.Point(19, 166);
             this.gioiTinhAccount.Name = "gioiTinhAccount";
             this.gioiTinhAccount.Size = new System.Drawing.Size(78, 24);
             this.gioiTinhAccount.TabIndex = 15;
@@ -179,7 +173,7 @@
             // 
             this.ngaySinhAccount.AutoSize = true;
             this.ngaySinhAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngaySinhAccount.Location = new System.Drawing.Point(45, 160);
+            this.ngaySinhAccount.Location = new System.Drawing.Point(19, 103);
             this.ngaySinhAccount.Name = "ngaySinhAccount";
             this.ngaySinhAccount.Size = new System.Drawing.Size(94, 24);
             this.ngaySinhAccount.TabIndex = 14;
@@ -189,7 +183,7 @@
             // 
             this.hoTenAccount.AutoSize = true;
             this.hoTenAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hoTenAccount.Location = new System.Drawing.Point(45, 95);
+            this.hoTenAccount.Location = new System.Drawing.Point(19, 38);
             this.hoTenAccount.Name = "hoTenAccount";
             this.hoTenAccount.Size = new System.Drawing.Size(98, 24);
             this.hoTenAccount.TabIndex = 13;
@@ -197,10 +191,22 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgvAccount);
+            this.panel1.Controls.Add(this.soDienThoaiAccount);
+            this.panel1.Controls.Add(this.dtpNgaySinhAccount);
+            this.panel1.Controls.Add(this.hoTenAccount);
+            this.panel1.Controls.Add(this.rbNuAccount);
+            this.panel1.Controls.Add(this.ngaySinhAccount);
+            this.panel1.Controls.Add(this.rbNamAccount);
+            this.panel1.Controls.Add(this.gioiTinhAccount);
+            this.panel1.Controls.Add(this.txbDiaChiAccount);
+            this.panel1.Controls.Add(this.EmailAccount);
+            this.panel1.Controls.Add(this.txbEmailAccount);
+            this.panel1.Controls.Add(this.diaChiAccount);
+            this.panel1.Controls.Add(this.txbSDTAccount);
+            this.panel1.Controls.Add(this.txbNameAccount);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(482, 643);
+            this.panel1.Size = new System.Drawing.Size(437, 622);
             this.panel1.TabIndex = 3;
             // 
             // dgvAccount
@@ -209,7 +215,7 @@
             this.dgvAccount.Location = new System.Drawing.Point(0, 3);
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.RowHeadersWidth = 51;
-            this.dgvAccount.Size = new System.Drawing.Size(476, 666);
+            this.dgvAccount.Size = new System.Drawing.Size(897, 725);
             this.dgvAccount.TabIndex = 0;
             // 
             // panel3
@@ -217,9 +223,9 @@
             this.panel3.Controls.Add(this.btXoaAccount);
             this.panel3.Controls.Add(this.btSuaAccount);
             this.panel3.Controls.Add(this.btThemAccount);
-            this.panel3.Location = new System.Drawing.Point(500, 547);
+            this.panel3.Location = new System.Drawing.Point(12, 640);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(428, 103);
+            this.panel3.Size = new System.Drawing.Size(437, 103);
             this.panel3.TabIndex = 4;
             // 
             // btXoaAccount
@@ -252,21 +258,59 @@
             this.btThemAccount.Text = "Thêm";
             this.btThemAccount.UseVisualStyleBackColor = true;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(456, 13);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(899, 67);
+            this.panel4.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tìm Kiếm";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(79, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(669, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(785, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 42);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 662);
+            this.ClientSize = new System.Drawing.Size(1367, 755);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Form3";
             this.Text = "Form3";
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -293,5 +337,9 @@
         private System.Windows.Forms.Button btXoaAccount;
         private System.Windows.Forms.Button btSuaAccount;
         private System.Windows.Forms.Button btThemAccount;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
