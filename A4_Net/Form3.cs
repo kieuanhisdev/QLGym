@@ -21,5 +21,10 @@ namespace A4_Net
         {
 
         }
+
+        private void txbSDTAccount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
