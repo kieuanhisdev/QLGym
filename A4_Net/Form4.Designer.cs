@@ -44,9 +44,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.datadichvu = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.paneldichvu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -162,6 +162,7 @@
             this.btdichvu1.TabIndex = 4;
             this.btdichvu1.Text = "Thêm";
             this.btdichvu1.UseVisualStyleBackColor = true;
+            this.btdichvu1.Click += new System.EventHandler(this.btdichvu1_Click);
             // 
             // btdichvu2
             // 
@@ -180,6 +181,7 @@
             this.btdichvu3.TabIndex = 6;
             this.btdichvu3.Text = "Xóa";
             this.btdichvu3.UseVisualStyleBackColor = true;
+            this.btdichvu3.Click += new System.EventHandler(this.btdichvu3_Click);
             // 
             // panel2
             // 
@@ -208,22 +210,6 @@
             this.panel3.Size = new System.Drawing.Size(457, 90);
             this.panel3.TabIndex = 6;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên sản phẩm";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(100, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(370, 31);
@@ -232,6 +218,22 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(100, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên sản phẩm";
             // 
             // Form4
             // 
@@ -244,6 +246,7 @@
             this.Controls.Add(this.paneldichvu);
             this.Name = "Form4";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.paneldichvu.ResumeLayout(false);
             this.paneldichvu.PerformLayout();
             this.panel1.ResumeLayout(false);
