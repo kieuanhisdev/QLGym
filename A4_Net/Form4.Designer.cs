@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.paneldichvu = new System.Windows.Forms.Panel();
-            this.masp = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.text3dichvu = new System.Windows.Forms.TextBox();
@@ -47,7 +45,7 @@
             this.datadichvu = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.texttimkiem = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.paneldichvu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,8 +57,6 @@
             // paneldichvu
             // 
             this.paneldichvu.BackColor = System.Drawing.Color.Transparent;
-            this.paneldichvu.Controls.Add(this.masp);
-            this.paneldichvu.Controls.Add(this.label3);
             this.paneldichvu.Controls.Add(this.richTextBox1);
             this.paneldichvu.Controls.Add(this.label1);
             this.paneldichvu.Controls.Add(this.text3dichvu);
@@ -74,23 +70,6 @@
             this.paneldichvu.Name = "paneldichvu";
             this.paneldichvu.Size = new System.Drawing.Size(459, 535);
             this.paneldichvu.TabIndex = 3;
-            // 
-            // masp
-            // 
-            this.masp.Location = new System.Drawing.Point(208, 17);
-            this.masp.Name = "masp";
-            this.masp.Size = new System.Drawing.Size(205, 31);
-            this.masp.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 25);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Mã sản phẩm";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // richTextBox1
             // 
@@ -118,14 +97,14 @@
             // 
             // text2dichvu
             // 
-            this.text2dichvu.Location = new System.Drawing.Point(208, 170);
+            this.text2dichvu.Location = new System.Drawing.Point(208, 154);
             this.text2dichvu.Name = "text2dichvu";
             this.text2dichvu.Size = new System.Drawing.Size(205, 31);
             this.text2dichvu.TabIndex = 4;
             // 
             // text1dichvu
             // 
-            this.text1dichvu.Location = new System.Drawing.Point(208, 94);
+            this.text1dichvu.Location = new System.Drawing.Point(208, 69);
             this.text1dichvu.Name = "text1dichvu";
             this.text1dichvu.Size = new System.Drawing.Size(205, 31);
             this.text1dichvu.TabIndex = 3;
@@ -147,7 +126,7 @@
             this.lb2dichvu.AutoSize = true;
             this.lb2dichvu.BackColor = System.Drawing.Color.Transparent;
             this.lb2dichvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2dichvu.Location = new System.Drawing.Point(45, 170);
+            this.lb2dichvu.Location = new System.Drawing.Point(45, 157);
             this.lb2dichvu.Name = "lb2dichvu";
             this.lb2dichvu.Size = new System.Drawing.Size(94, 25);
             this.lb2dichvu.TabIndex = 1;
@@ -158,7 +137,7 @@
             this.lb1sanpham.AutoSize = true;
             this.lb1sanpham.BackColor = System.Drawing.Color.Transparent;
             this.lb1sanpham.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1sanpham.Location = new System.Drawing.Point(41, 94);
+            this.lb1sanpham.Location = new System.Drawing.Point(42, 75);
             this.lb1sanpham.Name = "lb1sanpham";
             this.lb1sanpham.Size = new System.Drawing.Size(149, 25);
             this.lb1sanpham.TabIndex = 0;
@@ -224,7 +203,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.texttimkiem);
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(910, 2);
             this.panel3.Name = "panel3";
@@ -239,15 +218,13 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // texttimkiem
+            // textBox1
             // 
-            this.texttimkiem.Location = new System.Drawing.Point(100, 31);
-            this.texttimkiem.Name = "texttimkiem";
-            this.texttimkiem.Size = new System.Drawing.Size(250, 20);
-            this.texttimkiem.TabIndex = 1;
-            this.texttimkiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Location = new System.Drawing.Point(100, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -301,8 +278,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox texttimkiem;
-        private System.Windows.Forms.TextBox masp;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
