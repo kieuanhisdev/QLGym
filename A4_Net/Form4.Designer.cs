@@ -45,7 +45,7 @@
             this.datadichvu = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.texttimkiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.paneldichvu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -203,7 +203,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.texttimkiem);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(910, 2);
             this.panel3.Name = "panel3";
@@ -218,13 +218,15 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // texttimkiem
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 1;
+            this.texttimkiem.Location = new System.Drawing.Point(100, 31);
+            this.texttimkiem.Name = "texttimkiem";
+            this.texttimkiem.Size = new System.Drawing.Size(250, 20);
+            this.texttimkiem.TabIndex = 1;
+            this.texttimkiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -278,6 +280,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox texttimkiem;
     }
 }
