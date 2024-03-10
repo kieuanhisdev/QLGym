@@ -21,5 +21,10 @@ namespace A4_Net
         {
 
         }
+        //Modify modify = new Modify();
+      //  private void Form5_Load(object sender, EventArgs e)
+      //  {
+     //       dgvbanchitiet.DataSource = modify.Table("select * from SumBiller");
+      //}
     }
 }
