@@ -52,5 +52,15 @@ namespace A4_Net
             modify.command(query);
             datadichvu.DataSource = modify.Table("select * from SanPham");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + texttimkiem.Text + "'");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
