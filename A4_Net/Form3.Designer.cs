@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.dtpNgaySinhAccount = new System.Windows.Forms.DateTimePicker();
             this.rbNuAccount = new System.Windows.Forms.RadioButton();
             this.rbNamAccount = new System.Windows.Forms.RadioButton();
@@ -44,17 +43,18 @@
             this.ngaySinhAccount = new System.Windows.Forms.Label();
             this.hoTenAccount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btXoaAccount = new System.Windows.Forms.Button();
             this.btSuaAccount = new System.Windows.Forms.Button();
             this.btThemAccount = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -67,15 +67,6 @@
             this.panel2.Size = new System.Drawing.Size(900, 660);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // dgvAccount
-            // 
-            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccount.Location = new System.Drawing.Point(0, 3);
-            this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.RowHeadersWidth = 51;
-            this.dgvAccount.Size = new System.Drawing.Size(897, 725);
-            this.dgvAccount.TabIndex = 0;
             // 
             // dtpNgaySinhAccount
             // 
@@ -130,7 +121,6 @@
             this.txbSDTAccount.Name = "txbSDTAccount";
             this.txbSDTAccount.Size = new System.Drawing.Size(233, 20);
             this.txbSDTAccount.TabIndex = 20;
-            this.txbSDTAccount.TextChanged += new System.EventHandler(this.txbSDTAccount_TextChanged);
             // 
             // txbNameAccount
             // 
@@ -219,6 +209,15 @@
             this.panel1.Size = new System.Drawing.Size(437, 622);
             this.panel1.TabIndex = 3;
             // 
+            // dgvAccount
+            // 
+            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccount.Location = new System.Drawing.Point(0, 3);
+            this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.RowHeadersWidth = 51;
+            this.dgvAccount.Size = new System.Drawing.Size(897, 725);
+            this.dgvAccount.TabIndex = 0;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btXoaAccount);
@@ -269,22 +268,6 @@
             this.panel4.Size = new System.Drawing.Size(899, 67);
             this.panel4.TabIndex = 5;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(785, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 42);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(79, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(669, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -293,6 +276,22 @@
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm Kiếm";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(79, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(669, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(785, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 42);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form3
             // 
@@ -306,9 +305,9 @@
             this.Name = "Form3";
             this.Text = "Form3";
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
