@@ -15,7 +15,7 @@ namespace A4_Net
     {
         Modify modify = new Modify();
         public static string id = "SP";
-        
+        public static int val = 1;
         public Form4()
         {
             InitializeComponent();
@@ -34,12 +34,10 @@ namespace A4_Net
         private void btdichvu1_Click(object sender, EventArgs e)
         {
             
-            string query = "insert into SanPham values ('" + masp.Text + "' ,  N'" + text1dichvu.Text + "'  ,  '" + text2dichvu.Text + "'  ,  '" + text3dichvu.Text + "'  ,  N'" + richTextBox1.Text  +"')";
-           
-
+            string query = "insert into SanPham values ('" + id + val.ToString() + "' ,  N'" + text1dichvu.Text + "'  ,  '" + text2dichvu.Text + "'  ,  '" + text3dichvu.Text + "'  ,  N'" + richTextBox1.Text  +"')";
             modify.command(query);
             datadichvu.DataSource = modify.Table("select * from SanPham");
-            
+            val += 1;
 
         }
 
@@ -53,21 +51,6 @@ namespace A4_Net
             string query = "delete from SanPham where TenSanPham = '"+  text1dichvu.Text  + "'   ";
             modify.command(query);
             datadichvu.DataSource = modify.Table("select * from SanPham");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + texttimkiem.Text + "'");
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
