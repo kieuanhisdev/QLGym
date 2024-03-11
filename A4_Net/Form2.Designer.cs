@@ -28,597 +28,462 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btXoaAccount = new System.Windows.Forms.Button();
-            this.btSuaAccount = new System.Windows.Forms.Button();
-            this.btThemAccount = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dtpNgaySinhAccount = new System.Windows.Forms.DateTimePicker();
-            this.rbNuAccount = new System.Windows.Forms.RadioButton();
-            this.rbNamAccount = new System.Windows.Forms.RadioButton();
-            this.txbDiaChiAccount = new System.Windows.Forms.TextBox();
-            this.txbEmailAccount = new System.Windows.Forms.TextBox();
-            this.txbSDTAccount = new System.Windows.Forms.TextBox();
-            this.txbNameAccount = new System.Windows.Forms.TextBox();
-            this.diaChiAccount = new System.Windows.Forms.Label();
-            this.EmailAccount = new System.Windows.Forms.Label();
-            this.soDienThoaiAccount = new System.Windows.Forms.Label();
-            this.gioiTinhAccount = new System.Windows.Forms.Label();
-            this.ngaySinhAccount = new System.Windows.Forms.Label();
-            this.hoTenAccount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvAccount = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btdichvu1 = new System.Windows.Forms.Button();
-            this.btdichvu2 = new System.Windows.Forms.Button();
-            this.btdichvu3 = new System.Windows.Forms.Button();
-            this.paneldichvu = new System.Windows.Forms.Panel();
-            this.text3dichvu = new System.Windows.Forms.TextBox();
-            this.text2dichvu = new System.Windows.Forms.TextBox();
-            this.text1dichvu = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bt_taikhoan = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lb3dichvu = new System.Windows.Forms.Label();
             this.lb2dichvu = new System.Windows.Forms.Label();
-            this.lb1dichvu = new System.Windows.Forms.Label();
-            this.datadichvu = new System.Windows.Forms.DataGridView();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panthongke = new System.Windows.Forms.Panel();
-            this.bttheongay = new System.Windows.Forms.Button();
-            this.bttheothang = new System.Windows.Forms.Button();
-            this.bttheoquy = new System.Windows.Forms.Button();
-            this.btsodo = new System.Windows.Forms.Button();
-            this.dgvbanchitiet = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.lb1sanpham = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.paneldichvu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datadichvu)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            this.panthongke.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvbanchitiet)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(16, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1285, 788);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1277, 759);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Trang chủ";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1277, 759);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tài Khoản";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btXoaAccount);
-            this.panel3.Controls.Add(this.btSuaAccount);
-            this.panel3.Controls.Add(this.btThemAccount);
-            this.panel3.Location = new System.Drawing.Point(655, 662);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(612, 85);
-            this.panel3.TabIndex = 0;
-            // 
-            // btXoaAccount
-            // 
-            this.btXoaAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoaAccount.Location = new System.Drawing.Point(436, 11);
-            this.btXoaAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btXoaAccount.Name = "btXoaAccount";
-            this.btXoaAccount.Size = new System.Drawing.Size(151, 62);
-            this.btXoaAccount.TabIndex = 5;
-            this.btXoaAccount.Text = "Xóa";
-            this.btXoaAccount.UseVisualStyleBackColor = true;
-            // 
-            // btSuaAccount
-            // 
-            this.btSuaAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSuaAccount.Location = new System.Drawing.Point(231, 11);
-            this.btSuaAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btSuaAccount.Name = "btSuaAccount";
-            this.btSuaAccount.Size = new System.Drawing.Size(161, 62);
-            this.btSuaAccount.TabIndex = 4;
-            this.btSuaAccount.Text = "Sửa";
-            this.btSuaAccount.UseVisualStyleBackColor = true;
-            // 
-            // btThemAccount
-            // 
-            this.btThemAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemAccount.Location = new System.Drawing.Point(25, 11);
-            this.btThemAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btThemAccount.Name = "btThemAccount";
-            this.btThemAccount.Size = new System.Drawing.Size(155, 62);
-            this.btThemAccount.TabIndex = 3;
-            this.btThemAccount.Text = "Thêm";
-            this.btThemAccount.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dtpNgaySinhAccount);
-            this.panel2.Controls.Add(this.rbNuAccount);
-            this.panel2.Controls.Add(this.rbNamAccount);
-            this.panel2.Controls.Add(this.txbDiaChiAccount);
-            this.panel2.Controls.Add(this.txbEmailAccount);
-            this.panel2.Controls.Add(this.txbSDTAccount);
-            this.panel2.Controls.Add(this.txbNameAccount);
-            this.panel2.Controls.Add(this.diaChiAccount);
-            this.panel2.Controls.Add(this.EmailAccount);
-            this.panel2.Controls.Add(this.soDienThoaiAccount);
-            this.panel2.Controls.Add(this.gioiTinhAccount);
-            this.panel2.Controls.Add(this.ngaySinhAccount);
-            this.panel2.Controls.Add(this.hoTenAccount);
-            this.panel2.Location = new System.Drawing.Point(655, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(612, 651);
-            this.panel2.TabIndex = 1;
-            // 
-            // dtpNgaySinhAccount
-            // 
-            this.dtpNgaySinhAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgaySinhAccount.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinhAccount.Location = new System.Drawing.Point(241, 201);
-            this.dtpNgaySinhAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtpNgaySinhAccount.Name = "dtpNgaySinhAccount";
-            this.dtpNgaySinhAccount.Size = new System.Drawing.Size(309, 34);
-            this.dtpNgaySinhAccount.TabIndex = 25;
-            // 
-            // rbNuAccount
-            // 
-            this.rbNuAccount.AutoSize = true;
-            this.rbNuAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNuAccount.Location = new System.Drawing.Point(380, 272);
-            this.rbNuAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rbNuAccount.Name = "rbNuAccount";
-            this.rbNuAccount.Size = new System.Drawing.Size(65, 33);
-            this.rbNuAccount.TabIndex = 24;
-            this.rbNuAccount.TabStop = true;
-            this.rbNuAccount.Text = "Nữ";
-            this.rbNuAccount.UseVisualStyleBackColor = true;
-            // 
-            // rbNamAccount
-            // 
-            this.rbNamAccount.AutoSize = true;
-            this.rbNamAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNamAccount.Location = new System.Drawing.Point(243, 272);
-            this.rbNamAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rbNamAccount.Name = "rbNamAccount";
-            this.rbNamAccount.Size = new System.Drawing.Size(85, 33);
-            this.rbNamAccount.TabIndex = 23;
-            this.rbNamAccount.TabStop = true;
-            this.rbNamAccount.Text = "Nam";
-            this.rbNamAccount.UseVisualStyleBackColor = true;
-            // 
-            // txbDiaChiAccount
-            // 
-            this.txbDiaChiAccount.Location = new System.Drawing.Point(241, 510);
-            this.txbDiaChiAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txbDiaChiAccount.Name = "txbDiaChiAccount";
-            this.txbDiaChiAccount.Size = new System.Drawing.Size(309, 22);
-            this.txbDiaChiAccount.TabIndex = 22;
-            // 
-            // txbEmailAccount
-            // 
-            this.txbEmailAccount.Location = new System.Drawing.Point(241, 430);
-            this.txbEmailAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txbEmailAccount.Name = "txbEmailAccount";
-            this.txbEmailAccount.Size = new System.Drawing.Size(309, 22);
-            this.txbEmailAccount.TabIndex = 21;
-            // 
-            // txbSDTAccount
-            // 
-            this.txbSDTAccount.Location = new System.Drawing.Point(241, 354);
-            this.txbSDTAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txbSDTAccount.Name = "txbSDTAccount";
-            this.txbSDTAccount.Size = new System.Drawing.Size(309, 22);
-            this.txbSDTAccount.TabIndex = 20;
-            // 
-            // txbNameAccount
-            // 
-            this.txbNameAccount.Location = new System.Drawing.Point(241, 123);
-            this.txbNameAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txbNameAccount.Name = "txbNameAccount";
-            this.txbNameAccount.Size = new System.Drawing.Size(309, 22);
-            this.txbNameAccount.TabIndex = 19;
-            // 
-            // diaChiAccount
-            // 
-            this.diaChiAccount.AutoSize = true;
-            this.diaChiAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diaChiAccount.Location = new System.Drawing.Point(60, 503);
-            this.diaChiAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.diaChiAccount.Name = "diaChiAccount";
-            this.diaChiAccount.Size = new System.Drawing.Size(86, 29);
-            this.diaChiAccount.TabIndex = 18;
-            this.diaChiAccount.Text = "Địa chỉ";
-            // 
-            // EmailAccount
-            // 
-            this.EmailAccount.AutoSize = true;
-            this.EmailAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailAccount.Location = new System.Drawing.Point(60, 423);
-            this.EmailAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.EmailAccount.Name = "EmailAccount";
-            this.EmailAccount.Size = new System.Drawing.Size(74, 29);
-            this.EmailAccount.TabIndex = 17;
-            this.EmailAccount.Text = "Email";
-            // 
-            // soDienThoaiAccount
-            // 
-            this.soDienThoaiAccount.AutoSize = true;
-            this.soDienThoaiAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soDienThoaiAccount.Location = new System.Drawing.Point(60, 350);
-            this.soDienThoaiAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.soDienThoaiAccount.Name = "soDienThoaiAccount";
-            this.soDienThoaiAccount.Size = new System.Drawing.Size(154, 29);
-            this.soDienThoaiAccount.TabIndex = 16;
-            this.soDienThoaiAccount.Text = "Số điện thoại";
-            // 
-            // gioiTinhAccount
-            // 
-            this.gioiTinhAccount.AutoSize = true;
-            this.gioiTinhAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gioiTinhAccount.Location = new System.Drawing.Point(60, 274);
-            this.gioiTinhAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gioiTinhAccount.Name = "gioiTinhAccount";
-            this.gioiTinhAccount.Size = new System.Drawing.Size(101, 29);
-            this.gioiTinhAccount.TabIndex = 15;
-            this.gioiTinhAccount.Text = "Giới tính";
-            // 
-            // ngaySinhAccount
-            // 
-            this.ngaySinhAccount.AutoSize = true;
-            this.ngaySinhAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngaySinhAccount.Location = new System.Drawing.Point(60, 197);
-            this.ngaySinhAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ngaySinhAccount.Name = "ngaySinhAccount";
-            this.ngaySinhAccount.Size = new System.Drawing.Size(119, 29);
-            this.ngaySinhAccount.TabIndex = 14;
-            this.ngaySinhAccount.Text = "Ngày sinh";
-            // 
-            // hoTenAccount
-            // 
-            this.hoTenAccount.AutoSize = true;
-            this.hoTenAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hoTenAccount.Location = new System.Drawing.Point(60, 117);
-            this.hoTenAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.hoTenAccount.Name = "hoTenAccount";
-            this.hoTenAccount.Size = new System.Drawing.Size(123, 29);
-            this.hoTenAccount.TabIndex = 13;
-            this.hoTenAccount.Text = "Họ và Tên";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgvAccount);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(643, 748);
+            this.panel1.Size = new System.Drawing.Size(615, 100);
             this.panel1.TabIndex = 0;
             // 
-            // dgvAccount
+            // button1
             // 
-            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccount.Location = new System.Drawing.Point(4, 0);
-            this.dgvAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.RowHeadersWidth = 51;
-            this.dgvAccount.Size = new System.Drawing.Size(635, 743);
-            this.dgvAccount.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(509, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // textBox1
             // 
-            this.tabPage3.Controls.Add(this.btdichvu1);
-            this.tabPage3.Controls.Add(this.btdichvu2);
-            this.tabPage3.Controls.Add(this.btdichvu3);
-            this.tabPage3.Controls.Add(this.paneldichvu);
-            this.tabPage3.Controls.Add(this.datadichvu);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage3.Size = new System.Drawing.Size(1277, 759);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Dịch vụ";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(143, 38);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(345, 20);
+            this.textBox1.TabIndex = 1;
             // 
-            // btdichvu1
+            // label3
             // 
-            this.btdichvu1.Location = new System.Drawing.Point(715, 629);
-            this.btdichvu1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btdichvu1.Name = "btdichvu1";
-            this.btdichvu1.Size = new System.Drawing.Size(123, 70);
-            this.btdichvu1.TabIndex = 1;
-            this.btdichvu1.Text = "Thêm";
-            this.btdichvu1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tên sản phẩm";
             // 
-            // btdichvu2
+            // button3
             // 
-            this.btdichvu2.Location = new System.Drawing.Point(899, 629);
-            this.btdichvu2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btdichvu2.Name = "btdichvu2";
-            this.btdichvu2.Size = new System.Drawing.Size(123, 70);
-            this.btdichvu2.TabIndex = 2;
-            this.btdichvu2.Text = "Sửa";
-            this.btdichvu2.UseVisualStyleBackColor = true;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.Location = new System.Drawing.Point(596, 36);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 40);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Thống kê";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btdichvu3
+            // button2
             // 
-            this.btdichvu3.Location = new System.Drawing.Point(1081, 629);
-            this.btdichvu3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btdichvu3.Name = "btdichvu3";
-            this.btdichvu3.Size = new System.Drawing.Size(123, 70);
-            this.btdichvu3.TabIndex = 3;
-            this.btdichvu3.Text = "Xóa";
-            this.btdichvu3.UseVisualStyleBackColor = true;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.Location = new System.Drawing.Point(443, 36);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 40);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Dịch vụ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // paneldichvu
+            // bt_taikhoan
             // 
-            this.paneldichvu.BackColor = System.Drawing.Color.Transparent;
-            this.paneldichvu.Controls.Add(this.text3dichvu);
-            this.paneldichvu.Controls.Add(this.text2dichvu);
-            this.paneldichvu.Controls.Add(this.text1dichvu);
-            this.paneldichvu.Controls.Add(this.lb3dichvu);
-            this.paneldichvu.Controls.Add(this.lb2dichvu);
-            this.paneldichvu.Controls.Add(this.lb1dichvu);
-            this.paneldichvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paneldichvu.Location = new System.Drawing.Point(655, 7);
-            this.paneldichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.paneldichvu.Name = "paneldichvu";
-            this.paneldichvu.Size = new System.Drawing.Size(612, 594);
-            this.paneldichvu.TabIndex = 2;
+            this.bt_taikhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.bt_taikhoan.Location = new System.Drawing.Point(298, 36);
+            this.bt_taikhoan.Name = "bt_taikhoan";
+            this.bt_taikhoan.Size = new System.Drawing.Size(114, 40);
+            this.bt_taikhoan.TabIndex = 0;
+            this.bt_taikhoan.Text = "Tài Khoản";
+            this.bt_taikhoan.UseVisualStyleBackColor = true;
+            this.bt_taikhoan.Click += new System.EventHandler(this.bt_taikhoan_Click);
             // 
-            // text3dichvu
+            // panel2
             // 
-            this.text3dichvu.Location = new System.Drawing.Point(276, 313);
-            this.text3dichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.text3dichvu.Name = "text3dichvu";
-            this.text3dichvu.Size = new System.Drawing.Size(272, 37);
-            this.text3dichvu.TabIndex = 5;
-            this.text3dichvu.TextChanged += new System.EventHandler(this.text3dichvu_TextChanged);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(2, 107);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(615, 642);
+            this.panel2.TabIndex = 1;
             // 
-            // text2dichvu
+            // dataGridView1
             // 
-            this.text2dichvu.Location = new System.Drawing.Point(276, 212);
-            this.text2dichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.text2dichvu.Name = "text2dichvu";
-            this.text2dichvu.Size = new System.Drawing.Size(272, 37);
-            this.text2dichvu.TabIndex = 4;
-            this.text2dichvu.TextChanged += new System.EventHandler(this.text2dichvu_TextChanged);
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(609, 636);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // text1dichvu
+            // panel3
             // 
-            this.text1dichvu.Location = new System.Drawing.Point(276, 107);
-            this.text1dichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.text1dichvu.Name = "text1dichvu";
-            this.text1dichvu.Size = new System.Drawing.Size(272, 37);
-            this.text1dichvu.TabIndex = 3;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(623, 633);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(743, 110);
+            this.panel3.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(63, 59);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(52, 13);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Tổng tiền";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(596, 59);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Thanh Toán";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(175, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "label4";
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.button5);
+            this.panel4.Controls.Add(this.numericUpDown1);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.lb3dichvu);
+            this.panel4.Controls.Add(this.lb2dichvu);
+            this.panel4.Controls.Add(this.lb1sanpham);
+            this.panel4.Location = new System.Drawing.Point(623, 107);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(434, 369);
+            this.panel4.TabIndex = 3;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(323, 154);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(43, 20);
+            this.numericUpDown1.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(320, 285);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "label9";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(320, 225);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "label8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(320, 103);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "label7";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(320, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "label6";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Số lượng mua";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 277);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 24);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Chi tiết sản phẩm";
             // 
             // lb3dichvu
             // 
             this.lb3dichvu.AutoSize = true;
             this.lb3dichvu.BackColor = System.Drawing.Color.Transparent;
             this.lb3dichvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb3dichvu.Location = new System.Drawing.Point(84, 316);
-            this.lb3dichvu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb3dichvu.Location = new System.Drawing.Point(40, 216);
             this.lb3dichvu.Name = "lb3dichvu";
-            this.lb3dichvu.Size = new System.Drawing.Size(101, 31);
-            this.lb3dichvu.TabIndex = 2;
-            this.lb3dichvu.Text = "giá tiền";
+            this.lb3dichvu.Size = new System.Drawing.Size(86, 25);
+            this.lb3dichvu.TabIndex = 9;
+            this.lb3dichvu.Text = "Giá tiền";
             // 
             // lb2dichvu
             // 
             this.lb2dichvu.AutoSize = true;
             this.lb2dichvu.BackColor = System.Drawing.Color.Transparent;
             this.lb2dichvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2dichvu.Location = new System.Drawing.Point(84, 215);
-            this.lb2dichvu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb2dichvu.Location = new System.Drawing.Point(40, 91);
             this.lb2dichvu.Name = "lb2dichvu";
-            this.lb2dichvu.Size = new System.Drawing.Size(116, 31);
-            this.lb2dichvu.TabIndex = 1;
-            this.lb2dichvu.Text = "số lượng";
+            this.lb2dichvu.Size = new System.Drawing.Size(193, 25);
+            this.lb2dichvu.TabIndex = 8;
+            this.lb2dichvu.Text = "Số lượng trong kho";
             // 
-            // lb1dichvu
+            // lb1sanpham
             // 
-            this.lb1dichvu.AutoSize = true;
-            this.lb1dichvu.BackColor = System.Drawing.Color.Transparent;
-            this.lb1dichvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1dichvu.Location = new System.Drawing.Point(84, 111);
-            this.lb1dichvu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lb1dichvu.Name = "lb1dichvu";
-            this.lb1dichvu.Size = new System.Drawing.Size(145, 31);
-            this.lb1dichvu.TabIndex = 0;
-            this.lb1dichvu.Text = "tên dịch vụ";
+            this.lb1sanpham.AutoSize = true;
+            this.lb1sanpham.BackColor = System.Drawing.Color.Transparent;
+            this.lb1sanpham.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1sanpham.Location = new System.Drawing.Point(40, 31);
+            this.lb1sanpham.Name = "lb1sanpham";
+            this.lb1sanpham.Size = new System.Drawing.Size(149, 25);
+            this.lb1sanpham.TabIndex = 7;
+            this.lb1sanpham.Text = "Tên sản phẩm";
             // 
-            // datadichvu
+            // panel5
             // 
-            this.datadichvu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datadichvu.Location = new System.Drawing.Point(8, 7);
-            this.datadichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.datadichvu.Name = "datadichvu";
-            this.datadichvu.RowHeadersWidth = 51;
-            this.datadichvu.Size = new System.Drawing.Size(639, 719);
-            this.datadichvu.TabIndex = 1;
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.bt_taikhoan);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Location = new System.Drawing.Point(623, 1);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(740, 100);
+            this.panel5.TabIndex = 3;
             // 
-            // tabPage4
+            // panel6
             // 
-            this.tabPage4.Controls.Add(this.panthongke);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage4.Size = new System.Drawing.Size(1277, 759);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Thống Kê";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.dateTimePicker1);
+            this.panel6.Controls.Add(this.textBox3);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Location = new System.Drawing.Point(623, 485);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(743, 142);
+            this.panel6.TabIndex = 4;
             // 
-            // panthongke
+            // button5
             // 
-            this.panthongke.Controls.Add(this.dgvbanchitiet);
-            this.panthongke.Controls.Add(this.btsodo);
-            this.panthongke.Controls.Add(this.bttheoquy);
-            this.panthongke.Controls.Add(this.bttheothang);
-            this.panthongke.Controls.Add(this.bttheongay);
-            this.panthongke.Location = new System.Drawing.Point(24, 18);
-            this.panthongke.Name = "panthongke";
-            this.panthongke.Size = new System.Drawing.Size(1234, 702);
-            this.panthongke.TabIndex = 0;
-            this.panthongke.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.button5.Location = new System.Drawing.Point(300, 327);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // bttheongay
+            // dataGridView2
             // 
-            this.bttheongay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttheongay.Location = new System.Drawing.Point(124, 37);
-            this.bttheongay.Name = "bttheongay";
-            this.bttheongay.Size = new System.Drawing.Size(122, 57);
-            this.bttheongay.TabIndex = 0;
-            this.bttheongay.Text = "theo ngày";
-            this.bttheongay.UseVisualStyleBackColor = true;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(1058, 107);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(305, 369);
+            this.dataGridView2.TabIndex = 5;
             // 
-            // bttheothang
+            // label5
             // 
-            this.bttheothang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttheothang.Location = new System.Drawing.Point(404, 37);
-            this.bttheothang.Name = "bttheothang";
-            this.bttheothang.Size = new System.Drawing.Size(134, 57);
-            this.bttheothang.TabIndex = 1;
-            this.bttheothang.Text = "theo tháng";
-            this.bttheothang.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(63, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tên khác hàng";
             // 
-            // bttheoquy
+            // textBox2
             // 
-            this.bttheoquy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttheoquy.Location = new System.Drawing.Point(692, 37);
-            this.bttheoquy.Name = "bttheoquy";
-            this.bttheoquy.Size = new System.Drawing.Size(134, 57);
-            this.bttheoquy.TabIndex = 2;
-            this.bttheoquy.Text = "theo quý";
-            this.bttheoquy.UseVisualStyleBackColor = true;
+            this.textBox2.Location = new System.Drawing.Point(144, 49);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 1;
             // 
-            // btsodo
+            // textBox3
             // 
-            this.btsodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btsodo.Location = new System.Drawing.Point(988, 37);
-            this.btsodo.Name = "btsodo";
-            this.btsodo.Size = new System.Drawing.Size(134, 57);
-            this.btsodo.TabIndex = 3;
-            this.btsodo.Text = "sơ đồ";
-            this.btsodo.UseVisualStyleBackColor = true;
+            this.textBox3.Location = new System.Drawing.Point(144, 92);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 3;
             // 
-            // dgvbanchitiet
+            // label10
             // 
-            this.dgvbanchitiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvbanchitiet.Location = new System.Drawing.Point(64, 109);
-            this.dgvbanchitiet.Name = "dgvbanchitiet";
-            this.dgvbanchitiet.RowHeadersWidth = 51;
-            this.dgvbanchitiet.RowTemplate.Height = 24;
-            this.dgvbanchitiet.Size = new System.Drawing.Size(1100, 578);
-            this.dgvbanchitiet.TabIndex = 4;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(63, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Mã bill";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(435, 67);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(357, 73);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Ngày mua";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1307, 804);
-            this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(1367, 755);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.paneldichvu.ResumeLayout(false);
-            this.paneldichvu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datadichvu)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.panthongke.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvbanchitiet)).EndInit();
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btXoaAccount;
-        private System.Windows.Forms.Button btSuaAccount;
-        private System.Windows.Forms.Button btThemAccount;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dtpNgaySinhAccount;
-        private System.Windows.Forms.RadioButton rbNuAccount;
-        private System.Windows.Forms.RadioButton rbNamAccount;
-        private System.Windows.Forms.TextBox txbDiaChiAccount;
-        private System.Windows.Forms.TextBox txbEmailAccount;
-        private System.Windows.Forms.TextBox txbSDTAccount;
-        private System.Windows.Forms.TextBox txbNameAccount;
-        private System.Windows.Forms.Label diaChiAccount;
-        private System.Windows.Forms.Label EmailAccount;
-        private System.Windows.Forms.Label soDienThoaiAccount;
-        private System.Windows.Forms.Label gioiTinhAccount;
-        private System.Windows.Forms.Label ngaySinhAccount;
-        private System.Windows.Forms.Label hoTenAccount;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvAccount;
-        private System.Windows.Forms.Button btdichvu3;
-        private System.Windows.Forms.Panel paneldichvu;
-        private System.Windows.Forms.Button btdichvu2;
-        private System.Windows.Forms.Button btdichvu1;
-        private System.Windows.Forms.DataGridView datadichvu;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_taikhoan;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb3dichvu;
         private System.Windows.Forms.Label lb2dichvu;
-        private System.Windows.Forms.Label lb1dichvu;
-        private System.Windows.Forms.TextBox text3dichvu;
-        private System.Windows.Forms.TextBox text2dichvu;
-        private System.Windows.Forms.TextBox text1dichvu;
-        private System.Windows.Forms.Panel panthongke;
-        private System.Windows.Forms.Button bttheothang;
-        private System.Windows.Forms.Button bttheongay;
-        private System.Windows.Forms.DataGridView dgvbanchitiet;
-        private System.Windows.Forms.Button btsodo;
-        private System.Windows.Forms.Button bttheoquy;
+        private System.Windows.Forms.Label lb1sanpham;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
