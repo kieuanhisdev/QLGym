@@ -51,10 +51,20 @@ create table ChiTietPhieuThanhToan
 	TenSanPham NVARCHAR(100) Not null,
 	SoLuongMua INT NOT NULL,
 	ThanhTien decimal not null,
-	--FOREIGN KEY (MaHoaDon) REFERENCES PhieuThanhToan(MaHoaDon)
+	FOREIGN KEY (MaHoaDon) REFERENCES PhieuThanhToan(MaHoaDon)
 	
 )
 go
 
 --drop table ChiTietPhieuThanhToan
 --drop table PhieuThanhToan
+
+
+SELECT ct.TenSanPham, 
+       ct.SoLuongMua, 
+       ct.ThanhTien
+FROM ChiTietPhieuThanhToan ct
+INNER JOIN PhieuThanhToan pt ON ct.MaHoaDon = pt.MaHoaDon
+WHERE pt.MaHoaDon = 'MHD20240312210544';
+
+SELECT ct.TenSanPham,ct.SoLuongMua,ct.ThanhTien FROM ChiTietPhieuThanhToan ct INNER JOIN PhieuThanhToan pt ON ct.MaHoaDon = pt.MaHoaDon WHERE pt.MaHoaDon = 'MHD20240312210544';

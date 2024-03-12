@@ -51,9 +51,6 @@ namespace A4_Net
         {
 
         }
-        /// <summary>
-        /// 
-        /// </summary>
         Modify modify = new Modify();
         private int cnt = 4;
 
@@ -85,24 +82,13 @@ namespace A4_Net
 
             dataGridView1.DataSource = modify.Table("select * from SanPham");
             dataGridView1.Columns[4].Width = 185;
-            lbMaSP.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "TenSanPham"));
-            label7.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "SoLuong"));
-            label8.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "GiaTien"));
-
-            ///
-            ///
-
+           // dataGridView1.Rows[0].Cells[0].Selected = false;
+           // dataGridView1.Rows[dataGridView1.Rows.Count - 1].Selected = true;
             //label3.Text = modify.checkHD(query);
             cnt++;
 
             MaHD();
         }
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-
 
         private decimal tongtien = 0;
         private int stt = 0;
@@ -113,8 +99,6 @@ namespace A4_Net
             decimal numb = Convert.ToDecimal(numericUpDown1.Value);
             tongtien += giatien * numb;
             lbTongTien.Text = tongtien.ToString();
-            string query = "insert into ChiTietPhieuThanhToan values ('" + txMaHoaDon.Text + "' ,'" + lbMaSP.Text + "' ,  " + Convert.ToString(numericUpDown1.Value) + "  ,  " + Convert.ToString(giatien * numericUpDown1.Value) + ")";
-            modify.command(query);
             stt++;
             ListViewItem l = listView1.Items.Add(Convert.ToString(Convert.ToString(stt)));
             l.SubItems.Add(tenSP);
@@ -129,18 +113,54 @@ namespace A4_Net
         private void button4_Click(object sender, EventArgs e)
 
         {
-            MaHD();
-            // dataGridView2.Rows.Clear();
             string query = "insert into PhieuThanhToan values (N'" + txMaHoaDon.Text + "' ,  N'" + textBox2.Text + "'  ,  " + tongtien + ",  '" + dateTimePicker1.Value.ToShortDateString() + "')";
             modify.command(query);
+            // dataGridView2.Rows.Clear();
+            string MHD = lbMaBill.Text;
+
+            decimal giatien = Convert.ToDecimal(label8.Text);
+
+            foreach (ListViewItem item in listView1.Items)
+            {
+                // Lấy dữ liệu từ mỗi mục
+                string column1Value = item.SubItems[1].Text;
+                string column2Value = item.SubItems[2].Text;
+                //string column3Value = item.SubItems[3].Text;
+                string column4Value = item.SubItems[4].Text;
+
+                // Thêm dữ liệu vào câu lệnh INSERT INTO
+
+                string query1 = "insert into ChiTietPhieuThanhToan values ('" + MHD + "' ,'" + column1Value + "' ,  " + Convert.ToString(column2Value) + "  ,  " + Convert.ToString(column4Value) + ")";
+                // Thực thi câu lệnh INSERT INTO
+                modify.command(query1);
+            }
+
             listView1.Items.Clear();
             tongtien = 0;
-            
+            MaHD();
         }
+        
 
         private void txMaHoaDon_TextChanged(object sender, EventArgs e)
         {
             lbMaBill.Text = txMaHoaDon.Text;
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            lbMaSP.DataBindings.Clear();
+            lbMaSP.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "TenSanPham"));
+            label7.DataBindings.Clear();
+            label7.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "SoLuong"));
+            label8.DataBindings.Clear();
+            label8.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "GiaTien"));
+            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
