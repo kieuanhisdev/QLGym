@@ -40,7 +40,7 @@ namespace A4_Net
                 gt = 1;
             }
             else gt = 0;
-            string str = " insert into Account values (N'" + txbDiaChiAccount.Text + "' , N'" + txbNameAccount.Text + "' , '" + dtpNgaySinhAccount.Text + "', " + gt.ToString() + " ,  '" + txbSDTAccount.Text + "', N'" + txbEmailAccount.Text + "' )";
+            string str = " insert into Account values (N'"+ txbDiaChiAccount.Text +"' , N'" + txbNameAccount.Text + "' , '"+ dtpNgaySinhAccount.Text +  "', "+ gt.ToString() +" ,  '"+ txbSDTAccount.Text + "', N'"+ txbEmailAccount.Text +"' )";
             modify.command(str);
             dgvAccount.DataSource = modify.Table("select * from Account");
         }
@@ -80,7 +80,7 @@ namespace A4_Net
                 gt = 1;
             }
             else gt = 0;
-            string str = "update Account set HoVaTen = '" + txbNameAccount.Text + "' , NgaySinh = '" + dtpNgaySinhAccount.Text + "', GioiTinh =  " + gt.ToString() + " , SoDienThoai =   '" + txbSDTAccount.Text + "' , Email =  '" + txbEmailAccount.Text + "'  where UserName = '" + txbDiaChiAccount.Text + "'        ";
+            string str = "update Account set HoVaTen = '" + txbNameAccount.Text + "' , NgaySinh = '" + dtpNgaySinhAccount.Text + "', GioiTinh =  " + gt.ToString() + " , SoDienThoai =   '"+ txbSDTAccount.Text + "' , Email =  '"+ txbEmailAccount.Text +"'  where UserName = '"+  txbDiaChiAccount.Text   +"'        ";
             modify.command(str);
             dgvAccount.DataSource = modify.Table("select * from Account");
         }
@@ -93,7 +93,7 @@ namespace A4_Net
 
         private void timacc_TextChanged(object sender, EventArgs e)
         {
-            if (timacc.Text == string.Empty)
+            if(timacc.Text == string.Empty)
             {
                 dgvAccount.DataSource = modify.Table("select * from Account");
             }
@@ -106,7 +106,7 @@ namespace A4_Net
 
             dtpNgaySinhAccount.DataBindings.Clear();
             dtpNgaySinhAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "NgaySinh"));
-
+            
             txbSDTAccount.DataBindings.Clear();
             txbSDTAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "SoDienThoai"));
 
@@ -121,7 +121,5 @@ namespace A4_Net
         {
 
         }
-
-       
     }
 }

@@ -15,5 +15,3 @@ namespace A4_Net
         }
     }
 }
-//Data Source=DESKTOP-PAD99D1\SQLEXPRESS;Initial Catalog=QuanLyPhongGym;Integrated Security=True  // kieuanh
-//Data Source=DESKTOP-8IR3320\SQLEXPRESS;Initial Catalog=QuanLyPhongGym;Integrated Security=True //hoanganh
