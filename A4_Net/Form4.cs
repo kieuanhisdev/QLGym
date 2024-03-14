@@ -21,62 +21,10 @@ namespace A4_Net
             InitializeComponent();
         }
 
-        private void lb1sanpham_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb3dichvu_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btdichvu1_Click(object sender, EventArgs e)
         {
 
-            string query = "insert into SanPham values ('" + masp.Text + "' ,  N'" + text1dichvu.Text + "'  ,  '" + text2dichvu.Text + "'  ,  '" + text3dichvu.Text + "'  ,  N'" + richTextBox1.Text + "')";
-
-
-            modify.command(query);
-            datadichvu.DataSource = modify.Table("select * from SanPham");
-
-
-        }
-
-        public void xoadata()
-        {
-            masp.Text = string.Empty;
-            text1dichvu.Text = string.Empty;
-            text2dichvu.Text = string.Empty;
-            text3dichvu.Text = string.Empty;
-            richTextBox1.Text = string.Empty;
-
-        }
-
-        private void Form4_Load(object sender, EventArgs e)
-        {
-            datadichvu.DataSource = modify.Table("select * from SanPham");
-            datadichvu.Columns[3].Width = 150;
-            datadichvu.Columns[4].Width = 300;
-            datadichvu.Columns[1].Width = 250;
-            xoadata();
-        }
-
-        private void btdichvu3_Click(object sender, EventArgs e)
-        {
-            string query = "delete from SanPham where TenSanPham = '" + text1dichvu.Text + "'   ";
-            modify.command(query);
-            datadichvu.DataSource = modify.Table("select * from SanPham");
-            xoadata();
-        }
-
-        private void texttimkiem_Click(object sender, EventArgs e)
-        {
-            datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + button1.Text + "'");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             try
             {
                 if (string.IsNullOrEmpty(masp.Text) || string.IsNullOrEmpty(text1dichvu.Text) || string.IsNullOrEmpty(text2dichvu.Text) || string.IsNullOrEmpty(text3dichvu.Text) || string.IsNullOrEmpty(richTextBox1.Text))
@@ -104,8 +52,63 @@ namespace A4_Net
                     MessageBox.Show("ma san pham da ton tai");
 
                 }
+
+
             }
         }
+
+        public void xoadata()
+        {
+            masp.Text = string.Empty;
+            text1dichvu.Text = string.Empty;
+            text2dichvu.Text = string.Empty;
+            text3dichvu.Text = string.Empty;
+            richTextBox1.Text = string.Empty;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if ((texttimkiem2.Text != string.Empty) && (texttimkiem.Text == string.Empty))
+            {
+                datadichvu.DataSource = modify.Table("select * from SanPham where MaSanPham = '" + texttimkiem2.Text + "'");
+            }
+
+            if ((texttimkiem2.Text == string.Empty) && (texttimkiem.Text != string.Empty))
+            {
+                datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + texttimkiem.Text + "'");
+            }
+
+            if ((texttimkiem2.Text != string.Empty) && (texttimkiem.Text != string.Empty))
+            {
+                datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + texttimkiem.Text + "' and  MaSanPham = '" + texttimkiem2.Text + "' ");
+            }
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            datadichvu.DataSource = modify.Table("select * from SanPham");
+            datadichvu.Columns[3].Width = 150;
+            datadichvu.Columns[4].Width = 300;
+            datadichvu.Columns[1].Width = 250;
+            xoadata();
+        }
+
+        private void btdichvu3_Click(object sender, EventArgs e)
+        {
+            string query = "delete from SanPham where TenSanPham = '" + text1dichvu.Text + "'   ";
+            modify.command(query);
+            datadichvu.DataSource = modify.Table("select * from SanPham");
+            xoadata();
+        }
+
+        private void texttimkiem_Click(object sender, EventArgs e)
+        {
+            datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + button1.Text + "'");
+        }
+
+        
 
         private void texttimkiem_TextChanged(object sender, EventArgs e)
         {
