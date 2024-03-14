@@ -35,6 +35,7 @@ namespace A4_Net
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                
             }
 
 
@@ -135,7 +136,7 @@ namespace A4_Net
             text2dichvu.DataBindings.Clear();
             text2dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "SoLuong"));
             text3dichvu.DataBindings.Clear();
-            text3dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "SoLuong"));
+            text3dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "GiaTien"));
             richTextBox1.DataBindings.Clear();
             richTextBox1.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "ChiTietSanPham"));
         }
