@@ -71,6 +71,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btExit = new System.Windows.Forms.Button();
+            this.soLuongKho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -304,9 +305,14 @@
             // numericUpDown1
             // 
             this.numericUpDown1.BackColor = System.Drawing.Color.AliceBlue;
-            this.numericUpDown1.Location = new System.Drawing.Point(509, 36);
+            this.numericUpDown1.Location = new System.Drawing.Point(500, 35);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(29, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(46, 20);
             this.numericUpDown1.TabIndex = 16;
             // 
             // lbMaHaD
@@ -380,7 +386,8 @@
             this.lvTenSP,
             this.lvSoLuong,
             this.lvDonGia,
-            this.lvThanhTien});
+            this.lvThanhTien,
+            this.soLuongKho});
             this.listView1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(-1, 223);
@@ -573,13 +580,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(1327, 755);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
+            this.MaximizeBox = false;
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -637,5 +648,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ColumnHeader soLuongKho;
     }
 }

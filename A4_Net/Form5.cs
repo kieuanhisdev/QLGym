@@ -24,7 +24,7 @@ namespace A4_Net
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            dgvbanchitiet.DataSource = modify.Table("select * from PhieuThanhToan where MaHoaDon = '" + textBox1.Text + "'");
         }
         Modify modify = new Modify();
 
@@ -101,7 +101,7 @@ namespace A4_Net
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ExportToCsv(dataGridView1);
+            ExportToCsv(dgvbanchitiet);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -124,6 +124,22 @@ namespace A4_Net
         {
             textBox2.DataBindings.Clear();
             textBox2.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "TenSanPham"));
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ExportToCsv(dataGridView1);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+           // dataGridView1.DataSource = modify.Table("select * from ChiTietPhieuThanhToan where TenSanPham = '" + textBox2.Text + "'");
+            dataGridView1.DataSource = modify.Table("SELECT ct.TenSanPham, " +
+                                                           "ct.SoLuongMua, " +
+                                                           "ct.ThanhTien " +
+                                                 "FROM ChiTietPhieuThanhToan ct " +
+                                                "INNER JOIN PhieuThanhToan pt ON ct.MaHoaDon = pt.MaHoaDon " +
+                                                  "WHERE pt.MaHoaDon = '" + textBox1.Text + "' and TenSanPham = '" + textBox2.Text + "';");
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -40,9 +41,41 @@ namespace A4_Net
                 gt = 1;
             }
             else gt = 0;
-            string str = " insert into Account values (N'" + txbDiaChiAccount.Text + "' , N'" + txbNameAccount.Text + "' , '" + dtpNgaySinhAccount.Text + "', " + gt.ToString() + " ,  '" + txbSDTAccount.Text + "', N'" + txbEmailAccount.Text + "' )";
+            /*string str = " insert into Account values (N'" + txbDiaChiAccount.Text + "' , N'" + txbNameAccount.Text + "' , '" + dtpNgaySinhAccount.Text + "', " + gt.ToString() + " ,  '" + txbSDTAccount.Text + "', N'" + txbEmailAccount.Text + "' )";
             modify.command(str);
             dgvAccount.DataSource = modify.Table("select * from Account");
+            */
+            try
+            {
+                if (string.IsNullOrEmpty(txbNameAccount.Text) || string.IsNullOrEmpty(txbDiaChiAccount.Text) || string.IsNullOrEmpty(txbSDTAccount.Text) || string.IsNullOrEmpty(txbEmailAccount.Text))
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ tất cả các trường bắt buộc.");
+                    return; // Thoát khỏi chức năng nếu bất kỳ trường nào trống
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+            try
+            {
+                string str = " insert into Account values (N'" + txbDiaChiAccount.Text + "' , N'" + txbNameAccount.Text + "' , '" + dtpNgaySinhAccount.Text + "', " + gt.ToString() + " ,  '" + txbSDTAccount.Text + "', N'" + txbEmailAccount.Text + "' )";
+                modify.command(str);
+                dgvAccount.DataSource = modify.Table("select * from Account");
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("username da ton tai");
+
+                }
+
+
+            }
+
         }
 
         private void diaChiAccount_Click(object sender, EventArgs e)

@@ -115,6 +115,7 @@ namespace A4_Net
                 l.SubItems.Add(Convert.ToString(numericUpDown1.Value));
                 l.SubItems.Add(Convert.ToString(giatien));
                 l.SubItems.Add(Convert.ToString(giatien * numericUpDown1.Value));
+                l.SubItems.Add(label7.Text);
             }
             else
             {
@@ -147,9 +148,19 @@ namespace A4_Net
                     string column2Value = item.SubItems[2].Text;
                     //string column3Value = item.SubItems[3].Text;
                     string column4Value = item.SubItems[4].Text;
+                    string column5Value = item.SubItems[5].Text;
+                    int sl = Convert.ToInt32(column5Value) - Convert.ToInt32(column2Value);
+                    if (sl < 0)
+                    {
+                        MessageBox.Show("Số lượng sản phẩm không đủ");
+                        MaHD();
+                        return;
+                    }
+                    
+                    string query2 = "update SanPham set  SoLuong  = '" + Convert.ToString(sl) + "' where TenSanPham = '"+ column1Value + "'";
+                    modify.command(query2);
 
                     // Thêm dữ liệu vào câu lệnh INSERT INTO
-
                     string query1 = "insert into ChiTietPhieuThanhToan values ('" + MHD + "' ,'" + column1Value + "' ,  " + Convert.ToString(column2Value) + "  ,  " + Convert.ToString(column4Value) + ")";
                     // Thực thi câu lệnh INSERT INTO
                     modify.command(query1);
@@ -162,6 +173,7 @@ namespace A4_Net
                 lbTongTien.Text = string.Empty;
                 dateTimePicker1.Value = DateTime.Now;
                 MaHD();
+                loadBangSanPham();
             }
             else
             {
@@ -231,6 +243,23 @@ namespace A4_Net
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Hiển thị hộp thoại xác nhận
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát chương trình?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Nếu người dùng chọn "Yes", đóng form
+            if (result == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            // Nếu người dùng chọn "No", hủy bỏ việc đóng form
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

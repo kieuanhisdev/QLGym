@@ -29,7 +29,8 @@ namespace A4_Net
             {
                 if (string.IsNullOrEmpty(masp.Text) || string.IsNullOrEmpty(text1dichvu.Text) || string.IsNullOrEmpty(text2dichvu.Text) || string.IsNullOrEmpty(text3dichvu.Text) || string.IsNullOrEmpty(richTextBox1.Text))
                 {
-                    throw new Exception("du lieu khong duoc de trong");
+                    MessageBox.Show("Vui lòng điền đầy đủ tất cả các trường bắt buộc.");
+                    return; // Thoát khỏi chức năng nếu bất kỳ trường nào trống
                 }
             }
             catch (Exception ex)
@@ -37,8 +38,6 @@ namespace A4_Net
                 MessageBox.Show(ex.Message);
                 
             }
-
-
             try
             {
                 string query = "insert into SanPham values ('" + masp.Text + "' ,  N'" + text1dichvu.Text + "'  ,  '" + text2dichvu.Text + "'  ,  '" + text3dichvu.Text + "'  ,  N'" + richTextBox1.Text + "')";
@@ -143,18 +142,17 @@ namespace A4_Net
 
         private void btdichvu2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string query = "update SanPham set TenSanPham = '" + text1dichvu.Text + "' , SoLuong  = '" + text2dichvu.Text + "'  ,  GiaTien = '" + text3dichvu.Text + "' , ChiTietSanPham = '" + richTextBox1.Text + "'  where MaSanPham = '" + masp.Text + "' ";
-                modify.command(query);
-                datadichvu.DataSource = modify.Table("select * from SanPham ");
-                xoadata();
-            }
 
-            catch (Exception ex)
+            if (string.IsNullOrEmpty(masp.Text) || string.IsNullOrEmpty(text1dichvu.Text) || string.IsNullOrEmpty(text2dichvu.Text) || string.IsNullOrEmpty(text3dichvu.Text) || string.IsNullOrEmpty(richTextBox1.Text))
             {
-                MessageBox.Show("dữ liệu không được để trống");
+                MessageBox.Show("Vui lòng điền đầy đủ tất cả các trường bắt buộc.");
+                return; // Thoát khỏi chức năng nếu bất kỳ trường nào trống
             }
+            string query = "update SanPham set TenSanPham = '" + text1dichvu.Text + "' , SoLuong  = '" + text2dichvu.Text + "'  ,  GiaTien = '" + text3dichvu.Text + "' , ChiTietSanPham = '" + richTextBox1.Text + "'  where MaSanPham = '" + masp.Text + "' ";
+            modify.command(query);
+            datadichvu.DataSource = modify.Table("select * from SanPham ");
+            xoadata();
+
         }
 
         private void clear_Click(object sender, EventArgs e)
