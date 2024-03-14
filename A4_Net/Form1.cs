@@ -27,14 +27,7 @@ namespace A4_Net
 
         }
 
-        private void linkLabel1_Click(object sender, EventArgs e)
-        {
-            an f3 = new an();
-            this.Hide();
-            f3.ShowDialog();
-            this.Show();
-        }
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
            Application.Exit();
