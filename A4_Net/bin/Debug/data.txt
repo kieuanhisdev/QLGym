@@ -1,0 +1,5 @@
+TenSanPham	SoLuongMua	ThanhTien	
+Steroll	3	3000000	
+afdg	3	3702	
+abc	3	3702	
+			
