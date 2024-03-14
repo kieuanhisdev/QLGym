@@ -89,7 +89,6 @@
             // 
             // rbNuAccount
             // 
-            this.rbNuAccount.AllowDrop = true;
             this.rbNuAccount.AutoSize = true;
             this.rbNuAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNuAccount.Location = new System.Drawing.Point(259, 164);
@@ -102,7 +101,6 @@
             // 
             // rbNamAccount
             // 
-            this.rbNamAccount.AllowDrop = true;
             this.rbNamAccount.AutoSize = true;
             this.rbNamAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNamAccount.Location = new System.Drawing.Point(156, 164);
@@ -112,7 +110,6 @@
             this.rbNamAccount.TabStop = true;
             this.rbNamAccount.Text = "Nam";
             this.rbNamAccount.UseVisualStyleBackColor = true;
-            this.rbNamAccount.CheckedChanged += new System.EventHandler(this.rbNamAccount_CheckedChanged);
             // 
             // txbDiaChiAccount
             // 
@@ -127,7 +124,6 @@
             this.txbEmailAccount.Name = "txbEmailAccount";
             this.txbEmailAccount.Size = new System.Drawing.Size(233, 20);
             this.txbEmailAccount.TabIndex = 21;
-            this.txbEmailAccount.TextChanged += new System.EventHandler(this.txbEmailAccount_TextChanged);
             // 
             // txbSDTAccount
             // 
@@ -135,7 +131,6 @@
             this.txbSDTAccount.Name = "txbSDTAccount";
             this.txbSDTAccount.Size = new System.Drawing.Size(233, 20);
             this.txbSDTAccount.TabIndex = 20;
-            this.txbSDTAccount.TextChanged += new System.EventHandler(this.txbSDTAccount_TextChanged);
             // 
             // txbNameAccount
             // 
@@ -150,10 +145,9 @@
             this.diaChiAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diaChiAccount.Location = new System.Drawing.Point(19, 352);
             this.diaChiAccount.Name = "diaChiAccount";
-            this.diaChiAccount.Size = new System.Drawing.Size(95, 24);
+            this.diaChiAccount.Size = new System.Drawing.Size(97, 24);
             this.diaChiAccount.TabIndex = 18;
-            this.diaChiAccount.Text = "username";
-            this.diaChiAccount.Click += new System.EventHandler(this.diaChiAccount_Click);
+            this.diaChiAccount.Text = "Username";
             // 
             // EmailAccount
             // 
@@ -284,7 +278,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 42);
             this.button1.TabIndex = 2;
-            this.button1.Text = "tìm kiếm";
+            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -301,9 +295,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "username";
+            this.label1.Text = "Tìm Kiếm";
             // 
             // Form3
             // 

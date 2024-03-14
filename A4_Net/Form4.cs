@@ -15,17 +15,7 @@ namespace A4_Net
     {
         Modify modify = new Modify();
         public static string id = "SP";
-
-        public void xoadata()
-        {
-            masp.Text = string.Empty;
-            text1dichvu.Text = string.Empty;
-            text2dichvu.Text = string.Empty;
-            text3dichvu.Text = string.Empty;
-            richTextBox1.Text = string.Empty;
-
-        }
-        
+        public static int val = 1;
         public Form4()
         {
             InitializeComponent();
@@ -43,36 +33,47 @@ namespace A4_Net
 
         private void btdichvu1_Click(object sender, EventArgs e)
         {
-            
-            string query = "insert into SanPham values ('" + masp.Text + "' ,  N'" + text1dichvu.Text + "'  ,  '" + text2dichvu.Text + "'  ,  '" + text3dichvu.Text + "'  ,  N'" + richTextBox1.Text  +"')";
-           
+
+            string query = "insert into SanPham values ('" + masp.Text + "' ,  N'" + text1dichvu.Text + "'  ,  '" + text2dichvu.Text + "'  ,  '" + text3dichvu.Text + "'  ,  N'" + richTextBox1.Text + "')";
+
 
             modify.command(query);
             datadichvu.DataSource = modify.Table("select * from SanPham");
-            
+
+
+        }
+
+        public void xoadata()
+        {
+            masp.Text = string.Empty;
+            text1dichvu.Text = string.Empty;
+            text2dichvu.Text = string.Empty;
+            text3dichvu.Text = string.Empty;
+            richTextBox1.Text = string.Empty;
 
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            
             datadichvu.DataSource = modify.Table("select * from SanPham");
-            
-            
             xoadata();
-
         }
 
         private void btdichvu3_Click(object sender, EventArgs e)
         {
-            string query = "delete from SanPham where TenSanPham = '"+  text1dichvu.Text  + "'   ";
+            string query = "delete from SanPham where TenSanPham = '" + text1dichvu.Text + "'   ";
             modify.command(query);
             datadichvu.DataSource = modify.Table("select * from SanPham");
         }
 
+        private void texttimkiem_Click(object sender, EventArgs e)
+        {
+            datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + button1.Text + "'");
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if((texttimkiem2.Text != string.Empty) && (texttimkiem.Text == string.Empty))
+            if ((texttimkiem2.Text != string.Empty) && (texttimkiem.Text == string.Empty))
             {
                 datadichvu.DataSource = modify.Table("select * from SanPham where MaSanPham = '" + texttimkiem2.Text + "'");
             }
@@ -84,52 +85,24 @@ namespace A4_Net
 
             if ((texttimkiem2.Text != string.Empty) && (texttimkiem.Text != string.Empty))
             {
-                datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + texttimkiem.Text + "' and  MaSanPham = '"+texttimkiem2.Text+"' ");
+                datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + texttimkiem.Text + "' and  MaSanPham = '" + texttimkiem2.Text + "' ");
             }
-
-
-
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void texttimkiem_TextChanged(object sender, EventArgs e)
         {
-            if (texttimkiem.Text == string.Empty  &&  texttimkiem2.Text == string.Empty)
+            if (texttimkiem.Text == string.Empty && texttimkiem2.Text == string.Empty)
             {
                 datadichvu.DataSource = modify.Table("select * from SanPham");
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void texttimkiem2_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void btdichvu2_Click(object sender, EventArgs e)
-        {
-            string query = "update SanPham set TenSanPham = '"+text1dichvu.Text+"' , SoLuong  = '"+text2dichvu.Text+"'  ,  GiaTien = '"+text3dichvu.Text+"' , ChiTietSanPham = '"+richTextBox1.Text+"'  where MaSanPham = '"+masp.Text+"' ";
-            modify.command(query);
-            datadichvu.DataSource = modify.Table("select * from SanPham ");
-        }
-
-        private void text2dichvu_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void datadichvu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            
-        }
-
-        private void datadichvu_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+            if (texttimkiem.Text == string.Empty && texttimkiem2.Text == string.Empty)
+            {
+                datadichvu.DataSource = modify.Table("select * from SanPham");
+            }
         }
 
         private void datadichvu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -146,17 +119,11 @@ namespace A4_Net
             richTextBox1.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "ChiTietSanPham"));
         }
 
-        private void masp_TextChanged(object sender, EventArgs e)
+        private void btdichvu2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void texttimkiem2_TextChanged(object sender, EventArgs e)
-        {
-            if (texttimkiem.Text == string.Empty && texttimkiem2.Text == string.Empty)
-            {
-                datadichvu.DataSource = modify.Table("select * from SanPham");
-            }
+            string query = "update SanPham set TenSanPham = '" + text1dichvu.Text + "' , SoLuong  = '" + text2dichvu.Text + "'  ,  GiaTien = '" + text3dichvu.Text + "' , ChiTietSanPham = '" + richTextBox1.Text + "'  where MaSanPham = '" + masp.Text + "' ";
+            modify.command(query);
+            datadichvu.DataSource = modify.Table("select * from SanPham ");
         }
     }
 }
