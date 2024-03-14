@@ -16,6 +16,7 @@ namespace A4_Net
         Modify modify = new Modify();
         public static string id = "SP";
         public static int val = 1;
+        public static string sqll = "select MaSanPham as \"Mã sản phẩm\", TenSanPham as \"Tên sản phẩm\", SoLuong as \"Số lượng\", GiaTien as \"Giá tiền\", ChiTietSanPham as \"Chi tiết sản phẩm\" from SanPham";
         public Form4()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace A4_Net
             {
                 string query = "insert into SanPham values ('" + masp.Text + "' ,  N'" + text1dichvu.Text + "'  ,  '" + text2dichvu.Text + "'  ,  '" + text3dichvu.Text + "'  ,  N'" + richTextBox1.Text + "')";
                 modify.command(query);
-                datadichvu.DataSource = modify.Table("select * from SanPham");
+                datadichvu.DataSource = modify.Table("select MaSanPham as \"Mã sản phẩm\", TenSanPham as \"Tên sản phẩm\", SoLuong as \"Số lượng\", GiaTien as \"Giá tiền\", ChiTietSanPham as \"Chi tiết sản phẩm\" from SanPham");
                 xoadata();
             }
             catch (SqlException ex)
@@ -71,24 +72,27 @@ namespace A4_Net
         {
             if ((texttimkiem2.Text != string.Empty) && (texttimkiem.Text == string.Empty))
             {
-                datadichvu.DataSource = modify.Table("select * from SanPham where MaSanPham = '" + texttimkiem2.Text + "'");
+                datadichvu.DataSource = modify.Table(sqll +
+                    " where MaSanPham = '" + texttimkiem2.Text + "'");
             }
 
             if ((texttimkiem2.Text == string.Empty) && (texttimkiem.Text != string.Empty))
             {
-                datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + texttimkiem.Text + "'");
+                datadichvu.DataSource = modify.Table(sqll +
+                    " where TenSanPham = '" + texttimkiem.Text + "'");
             }
 
             if ((texttimkiem2.Text != string.Empty) && (texttimkiem.Text != string.Empty))
             {
-                datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + texttimkiem.Text + "' and  MaSanPham = '" + texttimkiem2.Text + "' ");
+                datadichvu.DataSource = modify.Table(sqll +
+                    " where TenSanPham = '" + texttimkiem.Text + "' and  MaSanPham = '" + texttimkiem2.Text + "' ");
             }
 
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            datadichvu.DataSource = modify.Table("select * from SanPham");
+            datadichvu.DataSource = modify.Table(sqll);
             datadichvu.Columns[3].Width = 150;
             datadichvu.Columns[4].Width = 300;
             datadichvu.Columns[1].Width = 250;
@@ -99,13 +103,14 @@ namespace A4_Net
         {
             string query = "delete from SanPham where TenSanPham = '" + text1dichvu.Text + "'   ";
             modify.command(query);
-            datadichvu.DataSource = modify.Table("select * from SanPham");
+            datadichvu.DataSource = modify.Table(sqll);
             xoadata();
         }
 
         private void texttimkiem_Click(object sender, EventArgs e)
         {
-            datadichvu.DataSource = modify.Table("select * from SanPham where TenSanPham = '" + button1.Text + "'");
+            datadichvu.DataSource = modify.Table(sqll +
+                " where TenSanPham = '" + button1.Text + "'");
         }
 
         
@@ -114,7 +119,7 @@ namespace A4_Net
         {
             if (texttimkiem.Text == string.Empty && texttimkiem2.Text == string.Empty)
             {
-                datadichvu.DataSource = modify.Table("select * from SanPham");
+                datadichvu.DataSource = modify.Table(sqll);
             }
         }
 
@@ -122,22 +127,22 @@ namespace A4_Net
         {
             if (texttimkiem.Text == string.Empty && texttimkiem2.Text == string.Empty)
             {
-                datadichvu.DataSource = modify.Table("select * from SanPham");
+                datadichvu.DataSource = modify.Table(sqll);
             }
         }
 
         private void datadichvu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             masp.DataBindings.Clear();
-            masp.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "MaSanPham"));
+            masp.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "Mã sản phẩm"));
             text1dichvu.DataBindings.Clear();
-            text1dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "TenSanPham"));
+            text1dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "Tên sản phẩm"));
             text2dichvu.DataBindings.Clear();
-            text2dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "SoLuong"));
+            text2dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "Số lượng"));
             text3dichvu.DataBindings.Clear();
-            text3dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "GiaTien"));
+            text3dichvu.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "Giá tiền"));
             richTextBox1.DataBindings.Clear();
-            richTextBox1.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "ChiTietSanPham"));
+            richTextBox1.DataBindings.Add(new Binding("Text", datadichvu.DataSource, "Chi tiết sản phẩm"));
         }
 
         private void btdichvu2_Click(object sender, EventArgs e)
@@ -150,7 +155,7 @@ namespace A4_Net
             }
             string query = "update SanPham set TenSanPham = '" + text1dichvu.Text + "' , SoLuong  = '" + text2dichvu.Text + "'  ,  GiaTien = '" + text3dichvu.Text + "' , ChiTietSanPham = '" + richTextBox1.Text + "'  where MaSanPham = '" + masp.Text + "' ";
             modify.command(query);
-            datadichvu.DataSource = modify.Table("select * from SanPham ");
+            datadichvu.DataSource = modify.Table(sqll);
             xoadata();
 
         }

@@ -22,32 +22,32 @@ namespace A4_Net
             InitializeComponent();
         }
 
+        public static string sqlPTT = "select MaHoaDon as \"Mã hóa đơn\", TenNguoiMua as \"Tên người mua\", TongTien as \"Tổng tiền\", NgayMua as \"Ngày mua\"  from PhieuThanhToan";
+
         private void button1_Click(object sender, EventArgs e)
         {
-            dgvbanchitiet.DataSource = modify.Table("select * from PhieuThanhToan where MaHoaDon = '" + textBox1.Text + "'");
+            dgvbanchitiet.DataSource = modify.Table(sqlPTT +
+                " where MaHoaDon = '" + textBox1.Text + "'");
         }
         Modify modify = new Modify();
 
         private void Form5_Load(object sender, EventArgs e)
         {
 
-            dgvbanchitiet.DataSource = modify.Table("select * from PhieuThanhToan");
+            dgvbanchitiet.DataSource = modify.Table(sqlPTT);
 
         }
 
         private void dgvbanchitiet_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textBox1.DataBindings.Clear();
-            textBox1.DataBindings.Add(new Binding("Text", dgvbanchitiet.DataSource, "MaHoaDon"));
+            textBox1.DataBindings.Add(new Binding("Text", dgvbanchitiet.DataSource, "Mã hóa đơn"));
         }
 
         public void loadFileHDChiTiet()
         {
             string mhd = textBox1.Text;
-            dataGridView1.DataSource = modify.Table("SELECT ct.TenSanPham, " +
-                                                            "ct.SoLuongMua, " +
-                                                            "ct.ThanhTien " +
-                                                  "FROM ChiTietPhieuThanhToan ct " +
+            dataGridView1.DataSource = modify.Table("SELECT ct.TenSanPham as \"Tên sản phẩm\", ct.SoLuongMua as \"Số lượng mua\",  ct.ThanhTien as \"Thành tiền \" FROM ChiTietPhieuThanhToan ct " +
                                                  "INNER JOIN PhieuThanhToan pt ON ct.MaHoaDon = pt.MaHoaDon " +
                                                    "WHERE pt.MaHoaDon = '" + mhd + "';");
         }
@@ -61,7 +61,8 @@ namespace A4_Net
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dgvbanchitiet.DataSource = modify.Table("SELECT* FROM PhieuThanhToan  WHERE NgayMua BETWEEN '"+ dateTimePicker1.Value +"' AND '" + dateTimePicker2.Value +"'");
+            dgvbanchitiet.DataSource = modify.Table(sqlPTT +
+                " WHERE NgayMua BETWEEN '"+ dateTimePicker1.Value +"' AND '" + dateTimePicker2.Value +"'");
         }
         private void ExportToCsv(DataGridView dataGridView)
         {
@@ -108,7 +109,7 @@ namespace A4_Net
         {
             string query = "delete from ChiTietPhieuThanhToan where MaHoaDon = '" + textBox1.Text + "' delete from PhieuThanhToan where MaHoaDon = '" + textBox1.Text + "'";
             modify.command(query);
-            dgvbanchitiet.DataSource = modify.Table("select * from PhieuThanhToan");
+            dgvbanchitiet.DataSource = modify.Table(sqlPTT);
             loadFileHDChiTiet();
         }
 
@@ -116,14 +117,14 @@ namespace A4_Net
         {
             string query = "delete from ChiTietPhieuThanhToan where TenSanPham = '" + textBox2.Text + "'";
             modify.command(query);
-            dgvbanchitiet.DataSource = modify.Table("select * from PhieuThanhToan");
+            dgvbanchitiet.DataSource = modify.Table(sqlPTT);
             loadFileHDChiTiet();
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textBox2.DataBindings.Clear();
-            textBox2.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "TenSanPham"));
+            textBox2.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "Tên sản phẩm"));
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -134,10 +135,7 @@ namespace A4_Net
         private void button7_Click(object sender, EventArgs e)
         {
            // dataGridView1.DataSource = modify.Table("select * from ChiTietPhieuThanhToan where TenSanPham = '" + textBox2.Text + "'");
-            dataGridView1.DataSource = modify.Table("SELECT ct.TenSanPham, " +
-                                                           "ct.SoLuongMua, " +
-                                                           "ct.ThanhTien " +
-                                                 "FROM ChiTietPhieuThanhToan ct " +
+            dataGridView1.DataSource = modify.Table("SELECT ct.TenSanPhamas \"Tên sản phẩm\", ct.SoLuongMua as \"Số lượng mua\",  ct.ThanhTien as \"Thành tiền \" FROM ChiTietPhieuThanhToan ct " +
                                                 "INNER JOIN PhieuThanhToan pt ON ct.MaHoaDon = pt.MaHoaDon " +
                                                   "WHERE pt.MaHoaDon = '" + textBox1.Text + "' and TenSanPham = '" + textBox2.Text + "';");
         }

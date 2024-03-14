@@ -63,7 +63,7 @@ namespace A4_Net
             {
                 string str = " insert into Account values (N'" + txbDiaChiAccount.Text + "' , N'" + txbNameAccount.Text + "' , '" + dtpNgaySinhAccount.Text + "', " + gt.ToString() + " ,  '" + txbSDTAccount.Text + "', N'" + txbEmailAccount.Text + "' )";
                 modify.command(str);
-                dgvAccount.DataSource = modify.Table("select * from Account");
+                dgvAccount.DataSource = modify.Table("select UserName, HoVaTen as \"Họ và tên\",   NgaySinh as \"Ngày sinh\", GioiTinh as \"Giới tính\", SoDienThoai as \"Số điện thoại\", Email\r\nfrom Account");
             }
             catch (SqlException ex)
             {
@@ -97,12 +97,12 @@ namespace A4_Net
         {
             string str = "delete from Account where UserName = '" + txbDiaChiAccount.Text + "'";
             modify.command(str);
-            dgvAccount.DataSource = modify.Table("select * from Account");
+            dgvAccount.DataSource = modify.Table("select UserName, HoVaTen as \"Họ và tên\",   NgaySinh as \"Ngày sinh\", GioiTinh as \"Giới tính\", SoDienThoai as \"Số điện thoại\", Email\r\nfrom Account");
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            dgvAccount.DataSource = modify.Table("select * from Account");
+            dgvAccount.DataSource = modify.Table("select UserName, HoVaTen as \"Họ và tên\",   NgaySinh as \"Ngày sinh\", GioiTinh as \"Giới tính\", SoDienThoai as \"Số điện thoại\", Email\r\nfrom Account");
         }
 
         private void btSuaAccount_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace A4_Net
             else gt = 0;
             string str = "update Account set HoVaTen = '" + txbNameAccount.Text + "' , NgaySinh = '" + dtpNgaySinhAccount.Text + "', GioiTinh =  " + gt.ToString() + " , SoDienThoai =   '" + txbSDTAccount.Text + "' , Email =  '" + txbEmailAccount.Text + "'  where UserName = '" + txbDiaChiAccount.Text + "'        ";
             modify.command(str);
-            dgvAccount.DataSource = modify.Table("select * from Account");
+            dgvAccount.DataSource = modify.Table("select UserName, HoVaTen as \"Họ và tên\",   NgaySinh as \"Ngày sinh\", GioiTinh as \"Giới tính\", SoDienThoai as \"Số điện thoại\", Email\r\nfrom Account");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -128,20 +128,20 @@ namespace A4_Net
         {
             if (timacc.Text == string.Empty)
             {
-                dgvAccount.DataSource = modify.Table("select * from Account");
+                dgvAccount.DataSource = modify.Table("select UserName, HoVaTen as \"Họ và tên\",   NgaySinh as \"Ngày sinh\", GioiTinh as \"Giới tính\", SoDienThoai as \"Số điện thoại\", Email\r\nfrom Account");
             }
         }
 
         private void dgvAccount_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             txbNameAccount.DataBindings.Clear();
-            txbNameAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "HoVaTen"));
+            txbNameAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "Họ và tên"));
 
             dtpNgaySinhAccount.DataBindings.Clear();
-            dtpNgaySinhAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "NgaySinh"));
+            dtpNgaySinhAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "Ngày sinh"));
 
             txbSDTAccount.DataBindings.Clear();
-            txbSDTAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "SoDienThoai"));
+            txbSDTAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "Giới tính"));
 
             txbEmailAccount.DataBindings.Clear();
             txbEmailAccount.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "Email"));
